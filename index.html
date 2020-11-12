@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Busqueda</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busqueda</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/search-page.css">
 </head>
+
 <body>
-  <div class="container-fluid">
-    <h1>This is the main page</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget condimentum sem. Ut enim odio, porttitor ac 
-      magna in, molestie vestibulum ex. Ut hendrerit leo ac lacus accumsan, non condimentum nunc auctor. Integer vitae 
-      vulputate erat. Ut pharetra eget nunc sed tristique. Morbi accumsan mattis hendrerit. Curabitur vitae mollis orci, 
-      sed efficitur elit. Quisque elementum consequat mi, non suscipit nulla tristique vel. Mauris quis pharetra nisi. Vestibulum 
-      sed massa ornare, porta velit sed, lobortis mauris. Quisque fermentum vestibulum sapien, vitae pharetra arcu laoreet et.</p>
-    <button class="btn btn-danger">This is a Bootstrap button</button>
-  </div>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo_white.png" width="40" height="40" alt="">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link nav-menu" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-menu" href="#">Recursos en línea</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-menu" href="#">Contacto</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <h1>This is the main page</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget condimentum sem. Ut enim odio, porttitor ac magna in, molestie vestibulum ex. Ut hendrerit leo ac lacus accumsan, non condimentum nunc auctor. Integer vitae vulputate erat. Ut
+            pharetra eget nunc sed tristique. Morbi accumsan mattis hendrerit. Curabitur vitae mollis orci, sed efficitur elit. Quisque elementum consequat mi, non suscipit nulla tristique vel. Mauris quis pharetra nisi. Vestibulum sed massa ornare, porta
+            velit sed, lobortis mauris. Quisque fermentum vestibulum sapien, vitae pharetra arcu laoreet et.</p>
+        <button class="btn btn-danger">This is a Bootstrap button</button>
+    </div>
 </body>
+
 </html>

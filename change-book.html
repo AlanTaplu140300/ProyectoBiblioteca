@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Busqueda</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/search-page.css">
     <script src="js/change-book.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,13 +19,23 @@
         <a class="navbar-brand" href="#">
             <img src="img/logo_white.png" width="50" height="40" alt="">
         </a>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link nav-menu" href="#">Inicio</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-menu" href="#">Recursos en línea</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-menu" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-menu" href="#">Contacto</a>
@@ -33,16 +47,9 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
         </form>
     </nav>
+
     <div id="main_container" class="container-fluid">
 
-    </div>
-    <div class="container-fluid">
-
-        <h1>This is the main page</h1>
-        <p>Lorem ipsum dolor sit amet,hola consectetur adipiscing elit. Duis eget condimentum sem. Ut enim odio, porttitor ac magna in, molestie vestibulum ex. Ut hendrerit leo ac lacus accumsan, non condimentum nunc auctor. Integer vitae vulputate erat.
-            Ut pharetra eget nunc sed tristique. Morbi accumsan mattis hendrerit. Curabitur vitae mollis orci, sed efficitur elit. Quisque elementum consequat mi, non suscipit nulla tristique vel. Mauris quis pharetra nisi. Vestibulum sed massa ornare,
-            porta velit sed, lobortis mauris. Quisque fermentum vestibulum sapien, vitae pharetra arcu laoreet et.</p>
-        <button class="btn btn-danger">This is a Bootstrap button</button>
     </div>
 </body>
 

@@ -5,3 +5,7 @@
 .nav-menu {
     color: white;
 }
+
+.nav-item {
+    padding: 0px 30px 0px 30px;
+}

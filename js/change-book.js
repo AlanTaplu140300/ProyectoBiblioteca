@@ -14,36 +14,45 @@ function printBooks(element) {
     row.className += "row";
     col1 = document.createElement("div");
     col2 = document.createElement("div");
-    col1.className += "col";
-    col2.className += "col";
+    col1.className += "col-2";
+    col2.className += "col-7";
     bookData = getData(element);
     console.log(bookData);
     imgsrc = element.imageLinks != undefined ? element.imageLinks.thumbnail : "";
     img = document.createElement("img");
     img.src = imgsrc;
     img.className += "img-thumbnail";
+    col1.style.textAlign = "right";
+    col1.style.paddingRight = "50px";
     col1.appendChild(img);
-    for (const bookText in bookData) {
-        if (bookData.hasOwnProperty(bookText)) {
-            parrafo = document.createElement("p");
-            parrafo.innerHTML = bookData[bookText];
-            col2.appendChild(parrafo);
-        }
-    }
     row.appendChild(col1);
-
+    title = document.createElement("h3")
+    p1 = document.createElement("p");
+    p1.innerHTML = bookData.authors + "  |  " + bookData.year;
+    p2 = document.createElement("p");
+    p2.innerHTML = "<b>Editorial: </b>" + bookData.editorial;
+    p3 = document.createElement("p");
+    p3.innerHTML = bookData.review;
+    title.style.color = "#00a1c7";
+    title.innerHTML = bookData.title;
+    col2.appendChild(title)
+    col2.appendChild(p1);
+    col2.appendChild(p2);
+    col2.appendChild(p3);
     row.appendChild(col2);
     container.appendChild(row);
     containerBooks.appendChild(container);
-    containerBooks.appendChild(document.createElement("hr"));
+    hr = document.createElement("br");
+    //hr.className += "separador";
+    containerBooks.appendChild(hr);
 }
 
 function getData(element) {
     elements = new Array();
-    elements["title"] = element.title != undefined ? element.title : "";
-    elements["authors"] = element.authors != undefined ? element.authors[0] : "";
-    elements["year"] = element.publishedDate != undefined ? element.publishedDate : "";
-    elements["editorial"] = element.publisher != undefined ? element.publisher : "";
-    elements["review"] = element.description != undefined ? element.description : "";
+    elements["title"] = element.title != undefined ? element.title : "N/A";
+    elements["authors"] = element.authors != undefined ? element.authors[0] : "N/A";
+    elements["year"] = element.publishedDate != undefined ? element.publishedDate : "N/A";
+    elements["editorial"] = element.publisher != undefined ? element.publisher : "N/A";
+    elements["review"] = element.description != undefined ? element.description : "N/A";
     return elements;
 }

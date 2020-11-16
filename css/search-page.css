@@ -1,15 +1,3 @@
 * {
     font-family: 'Roboto Condensed', sans-serif;
 }
-
-footer{
-	background-color: #0E153B;
-	line-height: 2;
-	text-align: center;
-	width: 100%;
-	color: white;
-}
-
-.barra {
-    border-right: 1px solid white;
-}

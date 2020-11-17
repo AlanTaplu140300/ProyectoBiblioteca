@@ -1,9 +1,13 @@
+let cont = 0;
 fetch('https://www.googleapis.com/books/v1/volumes?q=intitle:Los juegos del hambre&key=AIzaSyBrQ_panRZUN-YKqP6p7a2g6hd4k2-MesM')
     .then(response => response.json())
     .then(data => data.items.forEach(
-        element => (
-            printBooks(element.volumeInfo)
-        )
+        element => {
+            cont++;
+            if (cont < 6) {
+                printBooks(element.volumeInfo);
+            }
+        }
     ));
 
 function printBooks(element) {
@@ -17,7 +21,6 @@ function printBooks(element) {
     col1.className += "col-2";
     col2.className += "col-7";
     bookData = getData(element);
-    console.log(bookData);
     imgsrc = element.imageLinks != undefined ? element.imageLinks.thumbnail : "";
     img = document.createElement("img");
     img.src = imgsrc;
@@ -32,7 +35,7 @@ function printBooks(element) {
     p2 = document.createElement("p");
     p2.innerHTML = "<b>Editorial: </b>" + bookData.editorial;
     p3 = document.createElement("p");
-    p3.innerHTML = bookData.review;
+    p3.innerHTML = bookData.review.slice(0, 300);
     title.style.color = "#00a1c7";
     title.innerHTML = bookData.title;
     col2.appendChild(title)
@@ -42,9 +45,14 @@ function printBooks(element) {
     row.appendChild(col2);
     container.appendChild(row);
     containerBooks.appendChild(container);
-    hr = document.createElement("br");
-    //hr.className += "separador";
-    containerBooks.appendChild(hr);
+    if (cont < 5) {
+        hr = document.createElement("hr");
+        hr.className += "separador";
+        containerBooks.appendChild(hr);
+    } else {
+        br = document.createElement("br");
+        containerBooks.appendChild(br);
+    }
 }
 
 function getData(element) {

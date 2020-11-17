@@ -2,3 +2,38 @@
 	line-height:10px;
 
 }
+.breadcrumb >.active {
+   color: #AD9999;
+
+ 
+}
+
+
+.breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: #E5F5F9;
+  border-radius: 0.25rem;
+}
+
+.Link_color{
+	color: #428BCD;
+	
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  display: inline-block;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  color: gray;
+  content: "/";
+}
+
+.Fecha_dev{
+	color: #006CE5;
+}

@@ -1,21 +1,29 @@
 let cont = 0;
-fetch('https://www.googleapis.com/books/v1/volumes?q=intitle:Los juegos del hambre&key=AIzaSyBrQ_panRZUN-YKqP6p7a2g6hd4k2-MesM')
-    .then(response => response.json())
-    .then(data => data.items.forEach(
-        element => {
-            cont++;
-            if (cont < 6) {
-                printBooks(element.volumeInfo);
-            }
-        }
-    ));
+apiSearchFunction("");
 
-function printBooks(element) {
-    containerBooks = document.getElementById("main_container");
+function apiSearchFunction(busqueda) {
+    link = 'https://www.googleapis.com/books/v1/volumes?q=intitle:' + busqueda + '&key=AIzaSyBrQ_panRZUN-YKqP6p7a2g6hd4k2-MesM';
+    cont = 0;
+    fetch(link)
+        .then(response => response.json())
+        .then(data => data.items.forEach(
+            element => {
+                cont++;
+                if (cont < 6) {
+                    printBooks(element.volumeInfo, element);
+                }
+            }
+        ));
+}
+
+function printBooks(element, element_complete) {
+    containerBooks = document.getElementById("delete_container");
     container = document.createElement("div");
     container.className += "container";
+    container.className += " container_libros";
     row = document.createElement("div");
     row.className += "row";
+    row.className += " fix-row";
     col1 = document.createElement("div");
     col2 = document.createElement("div");
     col1.className += "col-2";
@@ -37,7 +45,10 @@ function printBooks(element) {
     p3 = document.createElement("p");
     p3.innerHTML = bookData.review.slice(0, 300);
     title.style.color = "#00a1c7";
-    title.innerHTML = bookData.title;
+    enlace = document.createElement("a");
+    enlace.href = "prst.html?id=" + element_complete.id;
+    enlace.innerHTML = bookData.title
+    title.appendChild(enlace);
     col2.appendChild(title)
     col2.appendChild(p1);
     col2.appendChild(p2);
@@ -63,4 +74,17 @@ function getData(element) {
     elements["editorial"] = element.publisher != undefined ? element.publisher : "N/A";
     elements["review"] = element.description != undefined ? element.description : "N/A";
     return elements;
+}
+
+function searchFunction() {
+    book_container = document.getElementById("main_container");
+    busqueda = document.getElementById("buscador").value;
+    resultado_busqueda = document.getElementById("resultado_busqueda");
+    resultado_busqueda.innerHTML = 'Resultado para "' + busqueda + '":';
+    delete_container = document.getElementById("delete_container");
+    book_container.removeChild(delete_container);
+    delete_container = document.createElement("div");
+    delete_container.id = "delete_container";
+    book_container.appendChild(delete_container)
+    apiSearchFunction(busqueda);
 }

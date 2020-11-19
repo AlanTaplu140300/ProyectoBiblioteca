@@ -25,6 +25,7 @@ function changeData(data) {
     book_year = data.volumeInfo.publishedDate != undefined ? data.volumeInfo.publishedDate : "N/A";
     book_editorial = data.volumeInfo.publisher != undefined ? data.volumeInfo.publisher : "N/A";
     editorialyear.innerHTML = book_editorial + ", " + book_year;
+    window.document.title = data.volumeInfo.title;
 }
 
 function searchFunction() {

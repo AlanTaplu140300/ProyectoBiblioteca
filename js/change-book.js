@@ -1,7 +1,11 @@
 let cont = 0;
-apiSearchFunction("");
+const urlParams = new URLSearchParams(window.location.search);
+let search = urlParams.get('search') ? urlParams.get('search') : "";
+apiSearchFunction(search);
 
 function apiSearchFunction(busqueda) {
+    document.getElementById("buscador").value = busqueda;
+    document.getElementById("resultado_busqueda").innerHTML = 'Resultado para "' + busqueda + '":';
     link = 'https://www.googleapis.com/books/v1/volumes?q=intitle:' + busqueda + '&key=AIzaSyBrQ_panRZUN-YKqP6p7a2g6hd4k2-MesM';
     cont = 0;
     fetch(link)
@@ -10,13 +14,13 @@ function apiSearchFunction(busqueda) {
             element => {
                 cont++;
                 if (cont < 6) {
-                    printBooks(element.volumeInfo, element);
+                    printBooks(element.volumeInfo, element, busqueda);
                 }
             }
         ));
 }
 
-function printBooks(element, element_complete) {
+function printBooks(element, element_complete, busqueda) {
     containerBooks = document.getElementById("delete_container");
     container = document.createElement("div");
     container.className += "container";
@@ -46,7 +50,7 @@ function printBooks(element, element_complete) {
     p3.innerHTML = bookData.review.slice(0, 300);
     title.style.color = "#00a1c7";
     enlace = document.createElement("a");
-    enlace.href = "prst.html?id=" + element_complete.id;
+    enlace.href = "prst.html?id=" + element_complete.id + "&search=" + busqueda;
     enlace.innerHTML = bookData.title
     title.appendChild(enlace);
     col2.appendChild(title)

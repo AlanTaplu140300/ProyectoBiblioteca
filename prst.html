@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <a class="navbar-brand" href="#">
             <img src="img/logo_white.png" width="60" height="40" alt="">
         </a>
@@ -30,8 +30,8 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-menu" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Recursos en línea
-                    </a>
+                  Recursos en línea
+                </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="https://elibro.net/es/lc/ucaribemx/inicio">Biblioteca Virtual</a>
                         <a class="dropdown-item" href="https://www.biblionline.pearson.com/AuthURLEzProxyNew.aspx?i=B2ZaYKcGqJzMs8iPF4rdFQ%3d%3d">Ebooks Pearson</a>
@@ -48,14 +48,13 @@
                 </li>
             </ul>
         </div>
-        <form id="form_buscador" class="form-inline my-2 my-lg-0">
+        <div id="form_buscador" class="form-inline my-2 my-lg-0">
             <input id="buscador" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-            <button id="boton_buscador" class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-        </form>
+            <button id="boton_buscador" class="btn btn-outline-success my-2 my-sm-0" onclick="searchFunction()"><i class="fas fa-search"></i></button>
+        </div>
     </nav>
-
-
-
+    <br>
+    <br>
     <br>
     <div class="container-fluid">
         <div class="row">

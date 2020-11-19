@@ -50,7 +50,7 @@
         </div>
         <div id="form_buscador" class="form-inline my-2 my-lg-0">
             <input id="buscador" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-            <button id="boton_buscador" class="btn btn-outline-success my-2 my-sm-0" onclick="searchFunction()"><i class="fas fa-search"></i></button>
+            <button id="boton_buscador" aria-pressed="false" class="btn btn-outline-success my-2 my-sm-0" onclick="searchFunction()"><i class="fas fa-search"></i></button>
         </div>
     </nav>
     <br>
@@ -58,34 +58,34 @@
     <br>
 
     <div class="container-fluid col-md-11">
-  <h2>Contactanos</h2>
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">Atención al Publico </a></li>
-    <li><a data-toggle="tab" href="#menu1"> Preguntas Frecuentes </a></li>
-    <li><a data-toggle="tab" href="#menu2"> Quejas y Sugerencias </a></li>
-    <li><a data-toggle="tab" href="#menu3"> Galeria </a></li>
-  </ul>
-
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <h3>Atención al Publico</h3>
-      <p>Directorio, Horario, Ubicacion</p>
-    </div>
-    <div id="menu1" class="tab-pane fade">
-      <h3>Preguntas Frecuentes</h3>
-      <p></p>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-      <h3>Quejas y Sugerencias</h3>
-      <p></p>
-    </div>
-    <div id="menu3" class="tab-pane fade">
-      <h3>Galeria</h3>
-      <p></p>
-    </div>
-  </div>
-
-
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li role="presentation">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#atencion" role="tab" aria-controls="home" aria-selected="true">Atención al Público</a>
+            </li>
+            <li role="presentation">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#preguntas" role="tab" aria-controls="profile" aria-selected="false">Preguntas Frecuentes</a>
+            </li>
+            <li role="presentation">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#quejas" role="tab" aria-controls="contact" aria-selected="false">Quejas y Sugerencias</a>
+            </li>
+            <li role="presentation">
+                <a class="nav-link" id="galeria-tab" data-toggle="tab" href="#galeria" role="tab" aria-controls="galeria" aria-selected="false">Galería</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="atencion" role="tabpanel" aria-labelledby="home-tab">
+                dcmdclkcmdsc
+            </div>
+            <div class="tab-pane fade" id="preguntas" role="tabpanel" aria-labelledby="profile-tab">
+                ñ,fsadsñd}{sad}
+            </div>
+            <div class="tab-pane fade" id="quejas" role="tabpanel" aria-labelledby="contact-tab">
+                skdsakdnsad
+            </div>
+            <div class="tab-pane fade" id="galeria" role="tabpanel" aria-labelledby="galeria-tab">
+                skdsakdnsad
+            </div>
+        </div>
     </div>
 
 </body>

@@ -19,3 +19,10 @@ footer{
 .barra {
     border-right: 1px solid white;
 }
+
+.borde_tab {
+    border-right: 2px solid #0E153B;
+    border-left:  2px solid #0E153B;
+    border: 2px solid #0E153B;
+
+}

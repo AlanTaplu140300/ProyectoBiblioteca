@@ -1,0 +1,11 @@
+footer{
+	background-color: #0E153B;
+	text-align: center;
+	width: 100%;
+	color: white;
+	bottom: 0;
+}
+
+.barra {
+    border-right: 1px solid white;
+}

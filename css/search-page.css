@@ -1,3 +1,19 @@
 * {
     font-family: 'Roboto Condensed', sans-serif;
 }
+
+.fix-row {
+    text-align: justify;
+    padding-top: 28px;
+}
+
+.alert-primary {
+    border-radius: 15px;
+    color: black;
+}
+
+.separador {
+    height: 1px;
+    background-color: #00a1c7;
+    width: 90%;
+}

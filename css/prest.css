@@ -8,6 +8,13 @@
  
 }
 
+.tam_letra{
+	font-size: 20px;
+}
+.Titulo_libro{
+	color:#0E1541;
+	font-weight:900;
+}
 
 .breadcrumb {
   display: -webkit-box;

@@ -19,6 +19,7 @@ function changeData(data) {
     title.innerHTML = data.volumeInfo.title;
     imgsrc = data.volumeInfo.imageLinks != undefined ? data.volumeInfo.imageLinks.thumbnail : "";
     img.src = imgsrc;
+    description.innerHTML = data.volumeInfo.description != undefined ? data.volumeInfo.description : "N/A";
     autor.innerHTML = data.volumeInfo.authors != undefined ? data.volumeInfo.authors[0] : "N/A"
     isbn.innerHTML = data.volumeInfo.industryIdentifiers != undefined ? data.volumeInfo.industryIdentifiers[0].identifier : "N/A";
     book_year = data.volumeInfo.publishedDate != undefined ? data.volumeInfo.publishedDate : "N/A";

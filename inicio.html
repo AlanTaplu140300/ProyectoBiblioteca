@@ -1,99 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/logo_white.png">
-    <title>Libro</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/prst.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/prest.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <script src="https://kit.fontawesome.com/71a5e773b9.js" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/logo_white.png">
+        <title>Libro</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/inicio.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/inicio.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src="https://kit.fontawesome.com/71a5e773b9.js" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <a class="navbar-brand" href="#">
-            <img src="img/logo_white.png" width="60" height="40" alt="">
-        </a>
-        <div class="collapse navbar-collapse justify-content-md-center" id="navbarNav">
-            <ul class="navbar-nav" id="nav_fix">
-                <li class="nav-item active">
-                    <a class="nav-link nav-menu" href="#">Inicio</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle nav-menu" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Recursos en línea
-                </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" target="_blank" href="https://elibro.net/es/lc/ucaribemx/inicio">Biblioteca Virtual</a>
-                        <a class="dropdown-item" target="_blank" href="https://www.biblionline.pearson.com/AuthURLEzProxyNew.aspx?i=B2ZaYKcGqJzMs8iPF4rdFQ%3d%3d">Ebooks Pearson</a>
-                        <a class="dropdown-item" target="_blank" href="https://sites.google.com/view/bibliotecas-digitales/inicio">Directorio de Bibliotecas Digitales</a>
-                        <a class="dropdown-item" target="_blank" href="https://www.e-unwto.org/">UNWTO Elibrary</a>
-                        <a class="dropdown-item" target="_blank" href="https://www.tandfonline.com/">Taylor and Francies</a>
-                        <a class="dropdown-item" target="_blank" href="https://cedocvirtual.sectur.gob.mx/cedocvirtual/index_new.html">CEDOC Virtual del ICTUR</a>
-                        <a class="dropdown-item" target="_blank" href="#">Bases de datos</a>
-                        <a class="dropdown-item" target="_blank" href="#">Bases de datos libres</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-menu" href="Contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </div>
-        <div id="form_buscador" class="form-inline my-2 my-lg-0">
-            <input id="buscador" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-            <button id="boton_buscador" class="btn btn-outline-success my-2 my-sm-0" onclick="searchFunction()"><i class="fas fa-search"></i></button>
-        </div>
-    </nav>
-    <br>
-    <br>
-    <br>
-
-<br>
-<br>
-<footer class="py-4">
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4 barra">
-                <ul class="list-unstyled">
-                    <li><strong>Horario de Atención</strong></li>
-                    <li>Lunes a Viernes: 7:15 a.m. - 9:00 p.m.</li>
-                    <li>Sádados: 9:00 a.m. - 2:00 p.m.</li>
-                </ul>
-            </div>
-            <div class="col-md-4 barra">
-
-
-                <a href="https://www.google.com/maps/place/Biblioteca+Antonio+Enr%C3%ADquez+Savignac/@21.2005089,-86.8242169,17z/data=!3m1!4b1!4m5!3m4!1s0x8f4c2e8207032b85:0x5633ee91166022eb!8m2!3d21.2005039!4d-86.8220282" target="_blank" style="color: white;">
-                    
-                    Esquina Fraccionamiento<br>
-                    Tabachines, CP. 77528 Cancún, Quintana Roo
-
-                </a>
-            </div>
-            <div class="col-md-4">
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="https://www.facebook.com/ucaribeoficial/" target="_blank" style="color: #428BCD;"><i class="fab fa-facebook fa-lg"></i></a>
-                        <a href="https://twitter.com/UcaribeOficial" target="_blank" style="color: #428BCD;"><i class="fab fa-twitter fa-lg"aria-hidden="true"></i></a> @UCARIBEOFICIAL
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo_white.png" width="60" height="40" alt="">
+            </a>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarNav">
+                <ul class="navbar-nav" id="nav_fix">
+                    <li class="nav-item active">
+                        <a class="nav-link nav-menu" href="inicio.html">Inicio</a>
                     </li>
-                    <li>
-                        <a href="https://www.unicaribe.mx/" target="_blank"><img src="img/logof.png" width="156" height="25" alt=""></a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-menu" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Recursos en línea
+                    </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" target="_blank" href="https://elibro.net/es/lc/ucaribemx/inicio">Biblioteca Virtual</a>
+                            <a class="dropdown-item" target="_blank" href="https://www.biblionline.pearson.com/AuthURLEzProxyNew.aspx?i=B2ZaYKcGqJzMs8iPF4rdFQ%3d%3d">Ebooks Pearson</a>
+                            <a class="dropdown-item" target="_blank" href="https://sites.google.com/view/bibliotecas-digitales/inicio">Directorio de Bibliotecas Digitales</a>
+                            <a class="dropdown-item" target="_blank" href="https://www.e-unwto.org/">UNWTO Elibrary</a>
+                            <a class="dropdown-item" target="_blank" href="https://www.tandfonline.com/">Taylor and Francies</a>
+                            <a class="dropdown-item" target="_blank" href="https://cedocvirtual.sectur.gob.mx/cedocvirtual/index_new.html">CEDOC Virtual del ICTUR</a>
+                            <a class="dropdown-item" target="_blank" href="#">Bases de datos</a>
+                            <a class="dropdown-item" target="_blank" href="#">Bases de datos libres</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-menu" href="Contacto.html">Contacto</a>
                     </li>
                 </ul>
             </div>
+            <div id="form_buscador" class="form-inline my-2 my-lg-0">
+                <input id="buscador" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                <button id="boton_buscador" class="btn btn-outline-success my-2 my-sm-0" onclick="searchFunction()"><i class="fas fa-search"></i></button>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <br>
+        <div class="container-fluid">
+            <div id="frase" class="alert alert-primary div-phrase" role="alert">
+
+            </div>
         </div>
-    </div>
-</footer>
+
+    <br>
+    <br>
+    <footer class="py-4">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 barra">
+                    <ul class="list-unstyled">
+                        <li><strong>Horario de Atención</strong></li>
+                        <li>Lunes a Viernes: 7:15 a.m. - 9:00 p.m.</li>
+                        <li>Sádados: 9:00 a.m. - 2:00 p.m.</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 barra">
+
+
+                    <a href="https://www.google.com/maps/place/Biblioteca+Antonio+Enr%C3%ADquez+Savignac/@21.2005089,-86.8242169,17z/data=!3m1!4b1!4m5!3m4!1s0x8f4c2e8207032b85:0x5633ee91166022eb!8m2!3d21.2005039!4d-86.8220282" target="_blank" style="color: white;">
+                        
+                        Esquina Fraccionamiento<br>
+                        Tabachines, CP. 77528 Cancún, Quintana Roo
+
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.facebook.com/ucaribeoficial/" target="_blank" style="color: #428BCD;"><i class="fab fa-facebook fa-lg"></i></a>
+                            <a href="https://twitter.com/UcaribeOficial" target="_blank" style="color: #428BCD;"><i class="fab fa-twitter fa-lg"aria-hidden="true"></i></a> @UCARIBEOFICIAL
+                        </li>
+                        <li>
+                            <a href="https://www.unicaribe.mx/" target="_blank"><img src="img/logof.png" width="156" height="25" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 </html>

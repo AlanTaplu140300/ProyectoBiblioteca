@@ -5,20 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo_white.png">
-    <title>Libro</title>
+    <title>Busqueda</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/prst.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/prest.css">
-    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/inicio.js"></script>
+    <link rel="stylesheet" href="css/inicio.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://kit.fontawesome.com/71a5e773b9.js" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onload="fourBooks();">
+    <!--Desde aquí-->
     <nav class="navbar navbar-expand-lg fixed-top">
         <a class="navbar-brand" href="inicio.html">
             <img src="img/logo_white.png" width="60" height="40" alt="">
@@ -57,91 +58,39 @@
     <br>
     <br>
     <div class="container-fluid">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb" style="padding: 14px; border-radius: 10px;">
-                <li class="breadcrumb-item"><a class="Link_color" href="inicio.html">Inicio</a></li>
-                <li class="breadcrumb-item"><a class="Link_color" id="breadcrumb_search" href="#">Búsqueda</a></li>
-                <li class="breadcrumb-item active" aria-current="page" id="breadcrumb_title"></li>
-            </ol>
-        </nav>
-        <br>
-        <br>
-
+        <div class="alert alert-primary phrase-div" role="alert">
+            "Las experiencias que más te enseñan son las de todos los días." ~ Friedrich Nietzsche
+          </div>
+    </div>
+    <div id="main_jumbotron" class="jumbotron jumbotron-fluid">
+        <div class="container hero-image-text">
+          <h1 id="main_h1">Biblioteca<br>Antonio Enríquez Savignac</h1>
+          <br>
+          <div id="form_buscador" class="form-inline my-2 my-lg-0">
+            <div class="buscador-hero-image">
+                <input id="buscador_hero_image" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                <button id="boton_buscador_hero_image" class="btn btn-outline-success my-2 my-sm-0" onclick="searchMainFunction()"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+          <br>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
-                <img id="book_img" src="#" class="rounded mx-auto d-block" width="246" height="364" alt="">
-            </div>
-            <div class="col-md-7">
-                <h2 id="title"></h2>
-                <p style="text-align: justify;" id="description">Después del último ataque sufrido, los habitantes de Pueblo han recuperado la tranquilidad y su existencia transcurre en paz. Todo parece funcionar a la perfección. Sin embargo, una serie de misteriosas desapariciones van
-                    a alterar las cosas... Una amenaza externa, con forma muy peculiar; una criatura extraordinaria dotada de una poderosa arma; una clave por descubrir... El equipo formado por Willy, Vegetta y sus mascotas, Trotuman y
-                    Vakypandy, arriesgará de nuevo susvidas y pondrá a prueba su extraordinario ingenio para solucionar el problema en una nueva y alucinante aventura con dibujos a todo color y Realidad Aumentada.</p>
-                <div class="row-4" id="Info_Libro">
-                    <p><b>Autores:</b> <span id="autor">Vegetta777, Willyrex</span> </p>
-                    <p><b>Editor:</b> <span id="editorialyear">PLANETA PUB, 2016</span></p>
-                    <p><b>ISBN:</b> <span id="isbn">PLANETA PUB, 2016</span></p>
-                </div>
+            <div class="col">
+                <h2 style="text-align: center;" class="text-primary">Libros Recomendados</h2>
             </div>
         </div>
-    </div>
-
-    <br>
-    <br>
-    
-    <div class="d-flex justify-content-center">
-        <div class="col-md-11">
-            <br>
-            <table class="table table-bordered">
-                <thead class="thead-light">
-                    <tr>
-                        <b>
-                          <th scope="col " class="text-center">Copia</th>
-                          <th scope="col" class="text-center">Estado</th>
-                          <th scope="col"  class="text-center">Fecha devolución</th>
-                          <th scope="col" class="text-center">Reservado</th>
-                          <th scope="col"  class="text-center">Ubicación</th>
-                        </b>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                      <th scope="row"  class="text-center">#1239A4</th>
-                      <td align=" center">Disponible</td>
-                      <td align=" center">N/A</td>
-                      <td align=" center">Sí</td>
-                      <td align="center">UQ012</td>
-                    </tr>
-                    <tr>
-                      <th scope="row" class="text-center">#1239A3</th>
-                      <td align=" center">No disponible</td>
-                      <td align=" center" class= "Fecha_dev">12-03-23</td>
-                      <td align=" center">Sí</td>
-                      <td align=" center">UQ012</td>
-                    </tr>
-                    <tr>
-                      <th scope="row" class="text-center" >#1239A2</th>
-                      <td align=" center">No disponible</td>
-                      <td align=" center" class= "Fecha_dev" >14-09-21</td>
-                      <td align=" center">No</td>
-                      <td align=" center">UQ012</td>
-                    </tr>
-                    <tr>
-                      <th  scope="row" class="text-center">#1239A1</th>
-                      <td align=" center">No disponible para prestamo</td>
-                      <td align=" center">N/A</td>
-                      <td align=" center">N/A</td>
-                      <td align=" center">UQ012</td>
-                    </tr>
-                </tbody>
-            </table>
-
+        <br>
+        <div id="books_row" class="row books-container">
         </div>
     </div>
-
-    <br>
-    <br>
-    <br>
 </body>
+
+
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -181,6 +130,4 @@
         </div>
     </div>
 </footer>
-
-
 </html>

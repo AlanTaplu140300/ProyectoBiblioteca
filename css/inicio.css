@@ -1,0 +1,58 @@
+.image-fix{
+    width: 70%;
+    margin: auto;
+}
+.phrase-div{
+    border-radius: 20px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.hero-image-text{
+    color: white;
+    text-align: center;
+}
+
+.buscador-hero-image{
+    margin: auto;
+}
+
+#main_jumbotron{
+    background-size: cover;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),url("../img/background-inicio.jpg");
+}
+
+#buscador_hero_image {
+    color: white;
+    font-size: 17px;
+    border-color: white;
+    border-radius: 15px;
+    width: 400px;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.7;
+}
+#buscador_hero_image::placeholder {
+    color: white;
+}
+
+#boton_buscador_hero_image {
+    padding: 0;
+    border: none;
+    background: none;
+    color: white;
+}
+
+.books-container{
+    color: #0E153B;
+}
+#main_h1{
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.card{
+    text-align: center;
+}

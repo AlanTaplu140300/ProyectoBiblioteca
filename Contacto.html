@@ -11,6 +11,7 @@
     <script src="js/prst.js"></script>
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/contacto.css">
     <script src="js/bootstrap.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://kit.fontawesome.com/71a5e773b9.js" crossorigin="anonymous"></script>
@@ -20,18 +21,18 @@
 <body>
     <!--Desde aquí-->
     <nav class="navbar navbar-expand-lg fixed-top">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="inicio.html">
             <img src="img/logo_white.png" width="60" height="40" alt="">
         </a>
         <div class="collapse navbar-collapse justify-content-md-center" id="navbarNav">
             <ul class="navbar-nav" id="nav_fix">
-                <li class="nav-item active">
-                    <a class="nav-link nav-menu" href="#">Inicio</a>
+                <li class="nav-item nav-item-fix active">
+                    <a class="nav-link nav-menu" href="inicio.html">Inicio</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item nav-item-fix dropdown">
                     <a class="nav-link dropdown-toggle nav-menu" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Recursos en línea
-                    </a>
+                  Recursos en línea
+                </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" target="_blank" href="https://elibro.net/es/lc/ucaribemx/inicio">Biblioteca Virtual</a>
                         <a class="dropdown-item" target="_blank" href="https://www.biblionline.pearson.com/AuthURLEzProxyNew.aspx?i=B2ZaYKcGqJzMs8iPF4rdFQ%3d%3d">Ebooks Pearson</a>
@@ -43,7 +44,7 @@
                         <a class="dropdown-item" target="_blank" href="#">Bases de datos libres</a>
                     </div>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-item-fix">
                     <a class="nav-link nav-menu" href="Contacto.html">Contacto</a>
                 </li>
             </ul>
@@ -56,41 +57,57 @@
     <br>
     <br>
     <br>
-
-    <div class="container-fluid col-md-11">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li role="presentation">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#atencion" role="tab" aria-controls="home" aria-selected="true"><b>Atención al Público</b></a>
-            </li>
-            <li role="presentation">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#preguntas" role="tab" aria-controls="profile" aria-selected="false"><b>Preguntas Frecuentes</b></a>
-            </li>
-            <li role="presentation">
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#quejas" role="tab" aria-controls="contact" aria-selected="false"><b>Quejas y Sugerencias</b></a>
-            </li>
-            <li role="presentation">
-                <a class="nav-link" id="galeria-tab" data-toggle="tab" href="#galeria" role="tab" aria-controls="galeria" aria-selected="false"><b>Galería</b></a>
-            </li>
-        </ul>
-
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade in show active" id="atencion" role="tabpanel" aria-labelledby="home-tab">
-                jsndsjdnsamlka
+    <div class="container-fluid">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Atención al público</a>
+              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Preguntas frecuentes</a>
+              <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Quejas y sugerencias</a>
+              <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-test" role="tab" aria-controls="nav-test" aria-selected="false">Galería</a>
             </div>
-            <div class="tab-pane fade" id="preguntas" role="tabpanel" aria-labelledby="profile-tab">
-                ¿Qué pasa si pierdo un libro que saque de la biblioteca?<br>
-                ¿Cuánto tiempo me prestan un libro?<br>
-                ¿Qué libros están disponibles en línea y cuales en físico?<br>
-                ¿Comó buscó un libro en el sistema de la biblioteca?<br>
-                ¿Comó tomó alguna acesoria por medio del CAM?<br>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="container">
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card border-primary" style="width: 450px;">
+                                <div class="card-body">
+                                    <h3 class="card-title">Directorio de atención</h3>
+                                    <p class="card-text"><span class="font-weight-bold">Franco Utera Gonzáles: </span>futrera@ucaribe.edu.mx</p>
+                                    <p class="card-text"><span class="font-weight-bold">Nora García Hernandez: </span>ngarcia@ucaribe.edu.mx</p>
+                                    <p class="card-text"><span class="font-weight-bold">Gabriela A. Basto: </span>gbasto@ucaribe.edu.mx</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card border-primary" style="width: 450px;">
+                                <div class="card-body">
+                                    <h3 class="card-title">Horario de atención</h3>
+                                    <p class="card-text"><span class="font-weight-bold">Lunes a Viernes: </span>7:15 am - 9:00 pm</p>
+                                    <p class="card-text"><span class="font-weight-bold">Sábados: </span>9:00 am - 2:00 pm</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="tab-pane fade" id="quejas" role="tabpanel" aria-labelledby="contact-tab">
-                skdsakdnsad
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="container">
+                    <br>
+                    <div class="row">
+                        <h3>Preguntas Frecuentes</h3>
+                    </div>
+                </div>
             </div>
-            <div class="tab-pane fade" id="galeria" role="tabpanel" aria-labelledby="galeria-tab">
-                skdsakdnsad
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                Quejas y sugerencias
             </div>
-        </div>
+            <div class="tab-pane fade" id="nav-test" role="tabpanel" aria-labelledby="nav-contact-tab">
+                Galería
+            </div>
+          </div>
     </div>
 
 </body>

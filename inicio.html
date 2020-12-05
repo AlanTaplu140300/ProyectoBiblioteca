@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo_white.png">
-    <title>Busqueda</title>
+    <title>Biblioteca</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -26,10 +26,10 @@
         </a>
         <div class="collapse navbar-collapse justify-content-md-center" id="navbarNav">
             <ul class="navbar-nav" id="nav_fix">
-                <li class="nav-item active">
+                <li class="nav-item nav-item-fix active">
                     <a class="nav-link nav-menu" href="inicio.html">Inicio</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item nav-item-fix dropdown">
                     <a class="nav-link dropdown-toggle nav-menu" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Recursos en línea
                 </a>
@@ -44,7 +44,7 @@
                         <a class="dropdown-item" target="_blank" href="#">Bases de datos libres</a>
                     </div>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-item-fix">
                     <a class="nav-link nav-menu" href="Contacto.html">Contacto</a>
                 </li>
             </ul>
@@ -63,6 +63,7 @@
           </div>
     </div>
     <div id="main_jumbotron" class="jumbotron jumbotron-fluid">
+        <br>
         <div class="container hero-image-text">
           <h1 id="main_h1">Biblioteca<br>Antonio Enríquez Savignac</h1>
           <br>
@@ -74,16 +75,21 @@
           </div>
           <br>
         </div>
+        <br>
+        <br>
     </div>
     <br>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col">
                 <h2 style="text-align: center;" class="text-primary">Libros Recomendados</h2>
             </div>
         </div>
         <br>
-        <div id="books_row" class="row books-container">
+        <div class="row books-container">
+            <div id="books_row" class="card-deck">
+
+            </div>
         </div>
     </div>
 </body>

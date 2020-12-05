@@ -9,10 +9,7 @@ function searchMainFunction() {
 }
 
 function fourBooks(){
-    colspace = document.createElement("div");
-    colspace.className = "col-md-1";
     books = document.getElementById("books_row");
-    books.append(colspace); 
     busqueda = booksRandom();
     link = 'https://www.googleapis.com/books/v1/volumes?q=intitle:' + busqueda + '&key=AIzaSyBrQ_panRZUN-YKqP6p7a2g6hd4k2-MesM';
     cont = 0;
@@ -25,21 +22,16 @@ function fourBooks(){
                     printBooks(element.volumeInfo,element, books,busqueda);
                 }
             }
-        ))
-        .then(()=>{
-            colspace2 = document.createElement("div");
-            colspace2.className = "col-md-1";
-            books.append(colspace2);
-        }); 
+        )); 
 }
 
 function printBooks(element,element_complete, books,busqueda) {
     col = document.createElement("div");
-    col.className = "col-md";
+    col.className = "col-md py-2";
     card = document.createElement("div");
     card.className = "card border-primary mb-3";
     card_body = document.createElement("div");
-    card_body.className = "card-body text-primary";
+    card_body.className = "card-body text-primary h-100";
     img = document.createElement("img");
     img.className = "card-img-top image-fix"; 
     parrafo = document.createElement("p");
@@ -57,7 +49,7 @@ function printBooks(element,element_complete, books,busqueda) {
 
     card_body.append(h5);
     card_body.append(parrafo);
-
+    card.append(document.createElement("br"))
     card.append(img);
     card.append(card_body);
 

@@ -1,5 +1,5 @@
 .image-fix{
-    width: 70%;
+    width: 60%;
     margin: auto;
 }
 .phrase-div{
@@ -55,4 +55,6 @@
 
 .card{
     text-align: center;
+    max-height: 438px;
+    min-height: 438px;
 }

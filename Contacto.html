@@ -63,7 +63,6 @@
               <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Atención al público</a>
               <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Preguntas frecuentes</a>
               <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Quejas y sugerencias</a>
-              <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-test" role="tab" aria-controls="nav-test" aria-selected="false">Galería</a>
             </div>
           </nav>
           <div class="tab-content" id="nav-tabContent">
@@ -96,16 +95,41 @@
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                 <div class="container">
                     <br>
-                    <div class="row">
-                        <h3>Preguntas Frecuentes</h3>
+                    <div class="col border-primary">
+                        <div class="Preguntas border-primary" style="border: solid 1px; padding: 10px;">
+                            <h3>Preguntas Frecuentes</h3>
+                            <p>¿Qué pasa si pierdo un libro que saque de la biblioteca?</p> 
+                            <p>¿Cuánto tiempo me prestan un libro?</p> 
+                            <p>¿Qué libros están disponibles en línea y cuales en físico?</p> 
+                            <p>¿Comó buscó un libro en el sistema de la biblioteca?</p> 
+                            <p>¿Comó tomó alguna acesoria por medio del CAM?</p> 
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                Quejas y sugerencias
-            </div>
-            <div class="tab-pane fade" id="nav-test" role="tabpanel" aria-labelledby="nav-contact-tab">
-                Galería
+                <div class="container">
+                    <br>
+                    <h3 style="text-align: center;">Quejas y sugerencias</h3>
+                    <br>
+                    <form style="margin: auto; width: 500px;">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Dirección de correo</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@ucaribe.edu.mx">
+                            <small id="emailHelp" class="form-text text-muted">De preferencia usar su correo institucional</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Escribe tu queja o sugerencia</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Responder a mi correo</label>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
             </div>
           </div>
     </div>
